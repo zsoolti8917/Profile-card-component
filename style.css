@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700&display=swap');
+
+/* || RESET */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* || VARIABLES */
+
+:root{
+
+    /* FONTS */
+    --FF:'Red Hat Display', sans-serif;
+    --FS: 18px;
+
+    /* COLORS */
+    --PRIMARY-DARK-CYAN: hsl(185, 75%, 39%);
+    --PRIMARY-DARK-DESATURATED-BLUE: hsl(229, 23%, 23%);
+    --PRIMARY-DARK-GRAYIS-BLUE: hsl(227, 10%, 46%);
+
+    /* BORDERS */
+    --BORDER-RADIUS: 10px;
+    --IMAGE-BORDER-RADIUS: 50%;
+    --IMAGE-BORDER: 5px solid white;
+
+    /* STANDARD SPACING */
+    --SPACING: 2rem;
+}
+
+/* || GENERAL STYLES */
+
+body{
+    font-family: var(--FF);
+    font-size: var(--FS);
+    background-color: var(--PRIMARY-DARK-CYAN);
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 48vw bottom 40vh, left 45vw top 44vh;
+    
+}
+
+.container{
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.card{
+    background-color: white;
+    border-radius: var(--BORDER-RADIUS);
+    max-width: 420px;
+    overflow: hidden;
+    margin:1rem;
+}
+
+.card__img img{
+    border-radius: var(--IMAGE-BORDER-RADIUS);
+    border: var(--IMAGE-BORDER);
+    width: 100px;
+    height: 100px;
+    margin-top: -52px;
+}
+.card__info
+{
+    position: relative;
+}
+.card__info--name, .card__info--age
+{
+    display: inline-block;
+  margin-right: 10px;
+}
+
+.card__stats{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2.5rem;
+    margin: 1rem 0;
+    border-top: 1px solid hsla(227, 10%, 46%, 0.4);
+}
+.card__info--name{
+    font-size: 1.4rem;
+    margin: 0.7rem 0.7rem;
+}
+.card__info--age{
+    font-size: 1.4rem;
+    color: var(--PRIMARY-DARK-GRAYIS-BLUE);
+}
+.card__info--city{
+    
+    color: var(--PRIMARY-DARK-GRAYIS-BLUE);
+    margin-bottom: 2rem;
+}
+
+.card__stats--item--text{
+    color: var(--PRIMARY-DARK-GRAYIS-BLUE);
+    font-size: 0.8rem;
+}
+
+.card__stats--item--number{
+    font-size: 1.2rem;
+    
+    font-weight: 700;
+}
+
+/* || MEDIA QUERIES */
+
+@media screen and (max-width: 425px){
+    .container{
+        max-width: 768px;
+        padding: 0 0;
+        
+    }
+
+    .body{
+        background-position: right 49vw;
+    }
+}
